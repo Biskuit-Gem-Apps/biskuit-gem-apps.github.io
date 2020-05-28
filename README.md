@@ -4,6 +4,6 @@ This website is developed using Reactjs with the sole purpose of hosting some st
 
 ## To update website
 
-1. Clone `dev` branch
+1. Clone `gh-pages` branch
 2. Edit the codes
 3. Run `npm run deploy` to publish
