@@ -7,23 +7,23 @@ import {
 } from "../action-type";
 
 export const closeSidebarMenu = () => ({
-	type: CLOSE_SIDEBAR_MENU
+	type: CLOSE_SIDEBAR_MENU,
 });
 
 export const openSidebarMenu = () => ({
-	type: OPEN_SIDEBAR_MENU
+	type: OPEN_SIDEBAR_MENU,
 });
 
 export const toggleSidebarMenu = () => ({
-	type: TOGGLE_SIDEBAR_MENU
+	type: TOGGLE_SIDEBAR_MENU,
 });
 
 export const loadSidebarMenu = currentPath => ({
 	type: LOAD_SIDEBAR_MENU,
-	payload: currentPath
+	payload: currentPath,
 });
 
 export const updateSidebarSelection = selectedItem => ({
 	type: UPDATE_MENU_SELECTION,
-	payload: selectedItem
+	payload: selectedItem,
 });

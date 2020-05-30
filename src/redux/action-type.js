@@ -1,3 +1,7 @@
+// Application
+export const LOAD_WEBSITE = "LOAD_WEBSITE";
+export const LOAD_WEBSITE_SUCCESS = "LOAD_WEBSITE_SUCCESS";
+
 // Navigation
 export const CLOSE_SIDEBAR_MENU = "CLOSE_SIDEBAR_MENU";
 export const OPEN_SIDEBAR_MENU = "OPEN_SIDEBAR_MENU";

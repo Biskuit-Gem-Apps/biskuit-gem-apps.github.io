@@ -16,7 +16,9 @@ const HomePage = () => {
 
 	return (
 		<Page actionBar={renderBreadcrumbs()} title="Welcome!">
-
+			<Panel title="Biskuit Gem Workshop">
+				The page you were looking for wasn't found!
+			</Panel>
 		</Page>
 	);
 };
