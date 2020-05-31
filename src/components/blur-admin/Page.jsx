@@ -8,7 +8,9 @@ const Page = props => {
 				<h1 className="al-title">{props.title}</h1>
 				{props.actionBar}
 			</div>
-			{props.children}
+			<div>
+				{props.children}
+			</div>
 		</div>
 	);
 };

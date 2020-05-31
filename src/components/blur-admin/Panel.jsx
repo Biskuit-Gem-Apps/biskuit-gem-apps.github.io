@@ -37,7 +37,7 @@ const Panel = props => {
 	};
 
 	return (
-		<div className={`panel panel-blur ${renderPanelSize()} light-text ${props.withScroll ? 'with-scroll' : ''} ${props.className}`}>
+		<div className={`panel ${props.style} ${renderPanelSize()} ${props.withScroll ? 'with-scroll' : ''} ${props.className}`}>
 			{renderHeader()}
 			<div className="panel-body">
 				{props.children}
@@ -49,6 +49,7 @@ const Panel = props => {
 PropTypes.defaultProps = {
 	className: '',
     size: 'auto',
+    style: 'panel-blur light-text',
     withScroll: false,
 };
 
@@ -56,6 +57,7 @@ Panel.propTypes = {
 	title: PropTypes.string,
     className: PropTypes.string,
     size: PropTypes.string,
+    style: PropTypes.string,
     withScroll: PropTypes.bool,
 };
 

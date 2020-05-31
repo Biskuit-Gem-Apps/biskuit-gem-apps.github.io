@@ -14,19 +14,24 @@ const DEFAULT_MENU = [
 	},
 	{
 		id: _.uniqueId("nav_"),
-		pathname: '/privacy-policies',
-		label: 'Privacy Policy',
-		icon: 'shield-alt',
+		pathname: "/app",
+		label: 'Applications',
+		icon: 'rocket',
 		items: [
 			{
 				id: _.uniqueId("nav_"),
-				pathname: '/privacy-policies/workout-interval-timer',
+				pathname: '/app/workout-interval-timer',
 				label: 'WIT',
 				icon: 'stopwatch',
 			}
-
 		],
 		expanded: false,
+	},
+	{
+		id: _.uniqueId("nav_"),
+		pathname: '/privacy-policies',
+		label: 'Privacy Policy',
+		icon: 'shield-alt',
 	},
 	{
 		id: _.uniqueId("nav_"),
@@ -46,7 +51,7 @@ const setSidebarMenuState = (menuItems, currentPath) => {
 		} else {
 			if (item.items) {
 				const result = setSidebarMenuState(item.items, currentPath);
-				if (result) {
+				if (!_.isEmpty(result)) {
 					// it is sub item (expand current item)
 					selected = result;
 					item.expanded = true;

@@ -6,3 +6,4 @@ export {
 	loadSidebarMenu, 
 	updateSidebarSelection, 
 } from "./navigation/navigation-action";
+export { loadDocx } from "./utility/docx-action";

@@ -1,6 +1,7 @@
 export { default as Navbar } from "./navbar/Navbar";
 export { default as Sidebar } from "./sidebar/Sidebar";
 export { default as Loading } from "./common/Loading";
+export { default as DocxViewer } from "./common/DocxViewer";
 
 // blur-admin
 export { default as Breadcrumbs } from './blur-admin/Breadcrumbs';

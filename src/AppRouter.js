@@ -5,7 +5,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 // Import Components
 import { Navbar, Sidebar } from "./components";
-import { HomePage, TnCPage, WITPrivacyPage, NotFound } from "./containers";
+import { HomePage, TermsPage, PrivacyPage, NotFound, AppPageWIT } from "./containers";
 import PortalLoading from "./PortalLoading";
 
 // Import Actions
@@ -38,8 +38,9 @@ class AppRouter extends Component {
 	    				<div className="al-content">
 	    					<Switch>
 						        <Route exact path="/" component={HomePage} />
-					            <Route path="/privacy-policies/workout-interval-timer" component={WITPrivacyPage} />
-					            <Route path="/terms-and-conditions" component={TnCPage} />
+					            <Route path="/privacy-policies" component={PrivacyPage} />
+					            <Route path="/terms-and-conditions" component={TermsPage} />
+					            <Route path="/app/workout-interval-timer" component={AppPageWIT} />
 					            <Route path="*" component={NotFound}/>
 					       	</Switch>
 	    				</div>
