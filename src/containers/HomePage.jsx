@@ -16,8 +16,6 @@ const HomePage = () => {
 
 	return (
 		<Page actionBar={renderBreadcrumbs()} title="Welcome!">
-			
-
 			<Panel title="Hello">
 				<p>We are a small team of individual developers that loves to develop application, games and websites. All of the products under BiskuitGem are created out of love from our developers during our free time. We are definitely not professionals and are doing this as a hobby. As much as we can, we will try to respond to feedback and fix any issues with our products. Hence, we hope you love our products as much as we do!</p>
 			</Panel>
