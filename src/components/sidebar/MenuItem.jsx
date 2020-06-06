@@ -27,7 +27,7 @@ class MenuItem extends Component {
 		if (navItem.items) {
 			// simply toggling the menu Item
 			e.preventDefault();
-			navItem.expanded = !navItem.expanded; // weird behaviour that this updates the redux store directly (instead of dispatching an action)
+			navItem.expanded = !navItem.expanded; // State Mutation...weird behaviour that this updates the redux store directly (instead of dispatching an action)
 			this.forceUpdate();
 		} else {
 			// set selection

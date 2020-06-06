@@ -16,7 +16,7 @@ const Navbar = props => {
 
 	const renderHamburgerMenu = () => {
 		return (
-			<a href="#" className="collapse-menu-link" onClick={onToggleMenu}>
+			<a className="collapse-menu-link" onClick={onToggleMenu}>
 				<i className="fa fa-bars"/>
 			</a>
 		);

@@ -20,7 +20,7 @@ class AppRouter extends Component {
 	componentDidMount() {
 		setTimeout(() => {
 			this.props.loadWebsiteComplete();
-		}, 1000);
+		}, 500);
 	}
 
 	render() {
@@ -51,10 +51,9 @@ class AppRouter extends Component {
 	    				<div className="al-footer-main clearfix">
 			            	<div className="al-copy">&copy; <a href="http://akveo.com/">Akveo</a> 2016</div>
 			             	<ul className="al-share clearfix">
-			                	<li><i className="socicon socicon-facebook"></i></li>
-			                	<li><i className="socicon socicon-twitter"></i></li>
-			                	<li><i className="socicon socicon-google"></i></li>
 			                	<li><i className="socicon socicon-github"></i></li>
+			                	<li><i className="socicon socicon-android"></i></li>
+			                	<li><i className="socicon socicon-apple"></i></li>
 			              	</ul>
 			            </div>
 	    			</footer>

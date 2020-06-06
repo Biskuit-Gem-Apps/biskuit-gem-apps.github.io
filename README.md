@@ -14,3 +14,5 @@ This website is developed using Reactjs with the sole purpose of hosting some st
 2. [React Blur Admin](https://github.com/knledg/react-blur-admin)
 3. [Blur Admin](https://akveo.github.io/blur-admin/)
 4. [Mammoth.js](https://github.com/mwilliamson/mammoth.js)
+5. [Font Awesome](https://fontawesome.com/)
+6. [Socicon](https://www.socicon.com/)

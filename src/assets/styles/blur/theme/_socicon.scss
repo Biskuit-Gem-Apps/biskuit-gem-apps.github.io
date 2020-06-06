@@ -57,6 +57,34 @@
   @include socicon($github-color, "Q");
 }
 
+.socicon-instagram {
+  @include socicon($instagram-color, "x")
+}
+
+.socicon-microsoft {
+  @include socicon($microsoft-color, "Z")
+}
+
+.socicon-apple {
+  @include socicon($apple-color, "O")
+}
+
+.socicon-playstore {
+  @include socicon($playstore-color, "L")
+}
+
+.socicon-youtube {
+  @include socicon($youtube-color, "r")
+}
+
+.socicon-outlook {
+  @include socicon($outlook-color, "1")
+}
+
+.socicon-android {
+  @include socicon($android-color, "_")
+}
+
 .socicon-stackoverflow {
   @include socicon($stackoverflow-color, "(");
 }
