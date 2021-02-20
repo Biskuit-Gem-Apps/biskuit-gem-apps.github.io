@@ -1,0 +1,129 @@
+/* hides sidebar if both className exists */
+.sidebar.collapsed {
+  width: 0
+}
+
+.sidebar {
+  width: $sidebar-width;
+  top: $top-height;
+  left: 0;
+  z-index: 904;
+  display: block;
+  min-height: 100%;
+  @include bg-translucent-dark(0.75);
+  height: 100%;
+  position: fixed;
+  transition: width 0.5s ease;
+  opacity: 0; /* hides bar by default */
+  @include tablet { /* effects applied when width is 768px or less */
+    opacity: 1; // show bar
+  }
+}
+
+.sidebar-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-list-item {
+  display: block;
+  position: relative;
+  float: none;
+  padding: 0;
+
+  &.selected:not(.with-sub-menu) { /* apply effect only when there is no sub menu items */
+    background-color: $selectedLinkBg;
+
+    /* selected effect */
+    a.sidebar-list-link {
+      color: $selectedLinkColor;
+      b {
+        color: $selectedLinkColor; /* dropdown arrow */
+      }
+    }
+  }
+}
+
+a.sidebar-list-link {
+  display: block;
+  height: 42px;
+  padding-left: 18px;
+  text-shadow: none;
+  font-size: 13px;
+  text-decoration: none;
+  color: $linkColor;
+  line-height: 42px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    color: $hoverLink;
+    b {
+      color: $hoverLink;
+    }
+  }
+  i {
+    margin-right: 18px;
+    width: 16px;
+    display: inline-block;
+  }
+  b {
+    display: block;
+    opacity: 1;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-shadow: none;
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    padding: 0;
+    text-align: center;
+    color: $linkColor;
+  }
+}
+
+.sidebar-sublist {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: none;
+
+  &.expanded {
+    display: block;
+  }
+
+  > li {
+    display: block;
+    float: none;
+    padding: 0;
+    border-bottom: none;
+    position: relative;
+
+    a {
+      display: block;
+      text-shadow: none;
+      font-size: 13px;
+      text-decoration: none;
+      color: $linkColor;
+      padding-left: 52px;
+      height: auto;
+      line-height: 29px;
+
+      &:hover {
+        color: $hoverLink;
+      }
+    }
+
+    &.selected:not(.with-sub-menu) > a {
+      border: none;
+      background-color: $selectedLinkBg;
+
+      &:hover {
+        color: $selectedLinkColor;
+      }
+    }
+  }
+}

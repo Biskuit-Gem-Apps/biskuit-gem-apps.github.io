@@ -1,12 +1,20 @@
 # Biskuit Gem Website
 
-This website is developed using Reactjs with the sole purpose of hosting some static pages for my applications. 
+This website is developed using React.js with the sole purpose of hosting content for my applications 
+
+## Branch
+
+- `gh-pages` --> the source codes of the website (edit the codes here)
+- `master` --> the compiled codes of the website (do not touch)
+- `oldVersion` --> contains the website designed using React Blur Admin
 
 ## To update website
 
 1. Clone `gh-pages` branch
 2. Edit the codes
-3. Run `npm run deploy` to publish
+    - `npm start` --> to run the website locally
+3. Run `npm run deploy` to publish to the master branch
+    - this will automatically be published on github.io
 
 ## Credits
 

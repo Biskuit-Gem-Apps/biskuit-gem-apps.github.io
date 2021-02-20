@@ -1,0 +1,60 @@
+/* reusable */
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  background-color: $light;
+  height: $top-height;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) /2); /* centers the content */
+  z-index: 10;
+  position: relative;
+
+  &-logo { /* equivalent to .navbar-logo */
+    color: $logoTextColor;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 24px;
+    @extend %align-center;
+  }
+
+  &-bars { /* equivalent to .navbar-bars */
+    opacity: 0; /* hides bar by default */
+    @include tablet { /* effects applied when width is 768px or less */
+      color: $dark;
+      opacity: 1; // show bar
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      font-size: 2rem;
+    }
+  }
+
+  &-menus { /* equivalent to .navbar-menus */
+    @extend %align-center;
+    list-style: none;
+    text-align: center;
+    margin-right: 24px;
+
+    @include tablet { /* effects applied when width is 768px or less */
+      display: none; // hides menu links
+    }
+
+    &-link { /* equivalent to .navbar-menus-link */
+      color: $dark;
+      @extend %align-center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 0 1rem;
+
+      &:hover { /* equivalent to .navbar-menus-link:hover */
+        color: $hoverLink;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}

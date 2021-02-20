@@ -1,0 +1,13 @@
+@mixin tablet {
+  /* apply effect only when width is 768px or less */
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  /* apply effect only when width is 280px or less */
+  @media screen and (max-width: 280px) {
+    @content
+  }
+}
