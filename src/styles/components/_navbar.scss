@@ -4,16 +4,16 @@
   align-items: center;
 }
 
-.navbar {
+.my-navbar {
   background-color: $light;
   height: $top-height;
+  padding: 0 calc((100vw - 1200px) /2); /* centers the content */
   display: flex;
   justify-content: space-between;
-  padding: 0 calc((100vw - 1200px) /2); /* centers the content */
   z-index: 10;
   position: relative;
 
-  &-logo { /* equivalent to .navbar-logo */
+  &-logo { /* equivalent to .my-navbar-logo */
     color: $logoTextColor;
     cursor: pointer;
     text-decoration: none;
@@ -41,7 +41,7 @@
     }
   }
 
-  &-bars { /* equivalent to .navbar-bars */
+  &-bars { /* equivalent to .my-navbar-bars */
     opacity: 0; /* hides bar by default */
     @include tablet { /* effects applied when width is 768px or less */
       color: $dark;
@@ -53,7 +53,7 @@
     }
   }
 
-  &-menu { /* equivalent to .navbar-menu */
+  &-menu { /* equivalent to .my-navbar-menu */
     @extend %align-center;
     list-style: none;
     text-align: center;
@@ -68,17 +68,17 @@
       display: none; // hides menu links
     }
 
-    &-item {  /* equivalent to .navbar-menu-item */
+    &-item {  /* equivalent to .my-navbar-menu-item */
       @extend %align-center;
       height: $top-height;
 
-      &-link { /* equivalent to .navbar-menu-item-link */
+      &-link { /* equivalent to .my-navbar-menu-item-link */
         color: $dark;
         justify-content: center;
         text-decoration: none;
         padding: 0 1rem;
 
-        &:hover { /* equivalent to .navbar-menu-item-link:hover */
+        &:hover { /* equivalent to .my-navbar-menu-item-link:hover */
           color: $hoverLink;
           transition: all 0.3s ease-out;
         }

@@ -6,16 +6,17 @@
 .app-header {
   display: block;
   height: $top-height;
+  width: 100%;
   margin: 0;
   background-repeat: repeat-x;
-  position: relative;
+  position: fixed;
   z-index: 905;
   color: #444444;
 }
 
 .app-main {
-  min-height: 500px;
-  padding: 0 calc((100vw - 1200px) /2); /* centers the content */
+  min-height: 100vh;
+  padding: $top-height calc((100vw - 1200px) /2); /* centers the content */
 }
 
 .app-content {
@@ -34,5 +35,37 @@
     font-size: 24px;
     text-transform: uppercase;
     opacity: 0.9;
+  }
+}
+
+.app-socicon-wrapper {
+  margin: -6px 0 0 12px;
+  padding: 0;
+  list-style: none;
+  float: left;
+  li {
+    list-style: none;
+    float: left;
+    margin-left: 16px;
+    i {
+      cursor: pointer;
+      transition: all 0.1s ease;
+      color: #ffffff;
+      padding: 6px;
+      box-sizing: content-box;
+      font-size: 16px;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    i.fa-facebook-square {
+      color: $facebook-color;
+    }
+    i.fa-twitter-square {
+      color: $twitter-color;
+    }
+    i.fa-google-plus-square {
+      color: $google-color;
+    }
   }
 }

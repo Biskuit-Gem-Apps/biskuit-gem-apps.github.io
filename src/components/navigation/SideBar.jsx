@@ -21,8 +21,8 @@ const Sidebar = props => {
     }, [props.location.pathname]);
 
     return (
-        <div className={`sidebar-overlay ${props.showSidebar ? "" : "collapsed"}`}>
-            <div className="sidebar">
+        <div className={`my-sidebar-overlay ${props.showSidebar ? "" : "collapsed"}`}>
+            <div className="my-sidebar">
                 {props.showSidebar && (
                     <SidebarMenuList depth={1} items={menuItems} expanded={false} selectedItem={selectedMenuItem} />
                 )}

@@ -5,6 +5,9 @@ $dropdown-menu-width: 200px;
 $angle-left: "\f100";
 $angle-right: "\f101";
 
+$assets-root: '../../assets/';
+$images-root: $assets-root + 'img/';
+$fonts-root: $assets-root + 'fonts/';
 $font-family: 'Roboto', sans-serif;
 $font-thin: 100;
 $font-light: 300;

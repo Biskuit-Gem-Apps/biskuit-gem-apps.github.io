@@ -4,7 +4,7 @@ import SidebarMenuItem from "./SidebarMenuItem";
 
 const SidebarMenuList = props => {
     return (
-        <ul className={`${props.depth === 1 ? 'sidebar-list' : 'sidebar-sublist' } ${props.expanded ? 'expanded' : ''}`}>
+        <ul className={`${props.depth === 1 ? 'my-sidebar-list' : 'my-sidebar-sublist' } ${props.expanded ? 'expanded' : ''}`}>
             {props.items.map((menuItem, idx) => (
                 <SidebarMenuItem depth={props.depth} item={menuItem} selectedItem={props.selectedItem} key={idx} />
             ))}

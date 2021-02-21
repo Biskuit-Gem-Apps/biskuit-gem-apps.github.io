@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import Loading from "./Loading";
+import Loading from "../Loading";
 import mammoth from "mammoth";
 
 const DocxViewer = props => {
@@ -21,15 +21,13 @@ const DocxViewer = props => {
     }, []);
 
     if (docContent !== null) {
-        return <div dangerouslySetInnerHTML={{ __html: docContent }}/>;
+        return <div className="my-docx" dangerouslySetInnerHTML={{ __html: docContent }}/>;
     }
     return <Loading />
 };
 
 DocxViewer.propTypes = {
     src: PropTypes.string.isRequired,
-    isDocxLoaded: PropTypes.bool.isRequired,
-    loadDocx: PropTypes.func.isRequired,
 };
 
 export default DocxViewer;

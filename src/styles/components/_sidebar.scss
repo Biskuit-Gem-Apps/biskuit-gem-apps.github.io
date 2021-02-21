@@ -1,14 +1,14 @@
 /* hides sidebar if both className exists */
-.sidebar-overlay.collapsed {
+.my-sidebar-overlay.collapsed {
   width: 0;
   background-color: transparent;
 
-  .sidebar {
+  .my-sidebar {
     width: 0;
   }
 }
 
-.sidebar-overlay {
+.my-sidebar-overlay {
   display: block;
   width: 100%;
   height: 100%;
@@ -25,7 +25,7 @@
   }
 }
 
-.sidebar {
+.my-sidebar {
   display: block;
   width: $sidebar-width;
   height: 100%;
@@ -33,13 +33,13 @@
   transition: width 0.5s ease;
 }
 
-.sidebar-list {
+.my-sidebar-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.sidebar-list-item {
+.my-sidebar-list-item {
   display: block;
   position: relative;
   float: none;
@@ -49,7 +49,7 @@
     background-color: $selectedLinkBg;
 
     /* selected effect */
-    a.sidebar-list-link {
+    a.my-sidebar-list-link {
       color: $selectedLinkColor;
       b {
         color: $selectedLinkColor; /* dropdown arrow */
@@ -58,7 +58,7 @@
   }
 }
 
-a.sidebar-list-link {
+a.my-sidebar-list-link {
   display: block;
   height: 42px;
   padding-left: 18px;
@@ -98,7 +98,7 @@ a.sidebar-list-link {
   }
 }
 
-.sidebar-sublist {
+.my-sidebar-sublist {
   padding: 0;
   list-style: none;
   position: relative;

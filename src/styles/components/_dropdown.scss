@@ -1,8 +1,8 @@
-.dropdown-menu.collapsed {
+.my-dropdown-menu.collapsed {
   display: none;
 }
 
-.dropdown-menu {
+.my-dropdown-menu {
   @include bg-translucent-grey(0.75);
   width: $dropdown-menu-width;
   position: absolute;
@@ -10,17 +10,16 @@
   list-style: none;
   text-align: start;
 
-
-  li { /* .dropdown-menu li */
+  li { /* .my-dropdown-menu li */
     cursor: pointer;
     transition-duration: 0.5s;
 
-    &:hover { /* .dropdown-menu li:hover */
+    &:hover { /* .my-dropdown-menu li:hover */
       background: $hoverLinkBg;
     }
   }
 
-  &-link { /* .dropdown-menu-link */
+  &-link { /* .my-dropdown-menu-link */
     display: block;
     height: 100%;
     width: 100%;

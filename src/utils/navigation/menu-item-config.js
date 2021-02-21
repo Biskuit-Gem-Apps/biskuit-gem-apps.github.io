@@ -1,8 +1,16 @@
 import React from "react";
 
-const PrivacyPage = React.lazy(() => import("../../pages/support/PrivacyPage"));
+const PageNotFound = React.lazy(() => import("../../pages/PageNotFound"));
+const AboutPage = React.lazy(() => import("../../pages/AboutPage"));
+const ViewDocxPage = React.lazy(() => import("../../pages/support/ViewDocxPage"));
 
 export const MENU_ITEMS = [
+    {
+        pathname: "/about",
+        label: 'About',
+        icon: 'info-circle',
+        component: AboutPage,
+    },
     {
         pathname: "/projects",
         noRoute: true,
@@ -13,7 +21,7 @@ export const MENU_ITEMS = [
                 pathname: '/projects/workout-interval-timer',
                 label: 'WIT (Mobile)',
                 icon: 'stopwatch',
-                component: PrivacyPage,
+                component: PageNotFound,
             }
         ],
     },
@@ -27,13 +35,13 @@ export const MENU_ITEMS = [
                 pathname: '/support/privacy-policy',
                 label: 'Privacy Policy',
                 icon: 'shield-alt',
-                component: PrivacyPage,
+                render: props => <ViewDocxPage {...props} title="Privacy Policy" docName="Privacy.docx" />,
             },
             {
                 pathname: '/support/terms-and-conditions',
                 label: 'Terms and Conditions',
                 icon: 'file-signature',
-                component: PrivacyPage,
+                render: props => <ViewDocxPage {...props} title="Terms and Conditions" docName="Terms.docx" />,
             }
         ],
     },

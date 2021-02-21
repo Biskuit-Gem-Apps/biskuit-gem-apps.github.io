@@ -1,0 +1,123 @@
+.app-landing {
+  padding: 40px 40px 200px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .landing-text { /* .app-landing .landing-text (nesting) */
+    position: relative;
+    max-width: 600px;
+
+    h2 {
+      color: #333;
+      font-size: 4em;
+      line-height: 1.4em;
+      font-weight: 500;
+
+      span {
+        color: $yellow;
+        font-size: 1.2em;
+        font-weight: 900;
+      }
+
+      span:nth-child(2){
+        color: $green;
+      }
+    }
+
+    p {
+      color: #333;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 20px;
+      background: $pink;
+      color: #fff;
+      border-radius: 40px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+  }
+
+  .landing-image {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 340px;
+    }
+  }
+
+  .landing-socicons {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    li {
+      list-style: none;
+
+      a {
+        display: inline-block;
+        margin: 10px 0;
+
+        i {
+          cursor: pointer;
+          transition: all 0.1s ease;
+          color: #ffffff;
+          padding: 6px;
+          box-sizing: content-box;
+          font-size: 26px;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+        i.socicon-github, i.socicon-android, i.socicon-apple {
+          color: black;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+@include smallscreen { /* effects applied when width is 768px or less */
+  .app-landing {
+    flex-direction: column;
+    padding: 20px 20px 120px;
+
+    .landing-text {
+      max-width: 100%;
+      h2 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+      }
+    }
+
+    .landing-image {
+      max-width: 100%;
+      justify-content: center;
+      img {
+        max-width: 300px;
+      }
+    }
+
+    .landing-socicons {
+      background: $yellow;
+      right: 0;
+      width: 50px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+  }
+}

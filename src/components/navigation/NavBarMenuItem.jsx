@@ -21,8 +21,8 @@ const NavBarMenuItem = props => {
     }
 
     return (
-        <li className="navbar-menu-item" onClick={toggleDropdown} onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => setShowDropdown(false)}>
-            <Link to={props.item.pathname} className="navbar-menu-item-link" onClick={handleMenuItemClick}>
+        <li className="my-navbar-menu-item" onClick={toggleDropdown} onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => setShowDropdown(false)}>
+            <Link to={props.item.pathname} className="my-navbar-menu-item-link" onClick={handleMenuItemClick}>
                 {props.item.label} {props.item.items && (
                     <i className={`fas ${showDropdown ? "fa-caret-up" : 'fa-caret-down'}`} />
                 )}

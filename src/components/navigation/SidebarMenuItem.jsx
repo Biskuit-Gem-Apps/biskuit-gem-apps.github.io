@@ -10,7 +10,7 @@ const SidebarMenuItem = props => {
     useEffect(() => {
         const subMenuClass = menuItem.items ? "with-sub-menu" : "";
         const isSelected = menuItem.items ? "" : (props.location.pathname === menuItem.pathname ? 'selected' : "");
-        setListClass(`sidebar-list-item ${subMenuClass} ${isSelected}`);
+        setListClass(`my-sidebar-list-item ${subMenuClass} ${isSelected}`);
     }, [menuItem, props.selectedItem]);
 
     const handleOnLinkClicked = e => {
@@ -28,7 +28,7 @@ const SidebarMenuItem = props => {
 
     return (
         <li className={listClass} key={menuItem.label}>
-            <Link className="sidebar-list-link" to={menuItem.pathname} onClick={handleOnLinkClicked}>
+            <Link className="my-sidebar-list-link" to={menuItem.pathname} onClick={handleOnLinkClicked}>
                 <i className={`fa fa-${menuItem.icon}`}/>
                 <span>{menuItem.label}</span>
                 {menuItem.items && (
