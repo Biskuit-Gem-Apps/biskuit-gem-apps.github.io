@@ -9,7 +9,7 @@
   height: $top-height;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1200px) /2); /* centers the content */
+  padding: 0 calc((100vw - 1200px) /2); /* centers the content */
   z-index: 10;
   position: relative;
 
@@ -18,8 +18,27 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
-    margin-left: 24px;
+    font-family: $font-family;
+    margin-left: 2rem;
+    white-space: nowrap;
+    outline: none !important;
+    line-height: 60px;
     @extend %align-center;
+
+    &:hover {
+      transition: color 0.5s ease;
+      color: $logoTextSpanColor;
+    }
+
+    img {
+      width: auto;
+      height: 3.5rem;
+      margin-right: 0.5rem;
+    }
+
+    span {
+      color: $logoTextSpanColor;
+    }
   }
 
   &-bars { /* equivalent to .navbar-bars */
@@ -34,26 +53,35 @@
     }
   }
 
-  &-menus { /* equivalent to .navbar-menus */
+  &-menu { /* equivalent to .navbar-menu */
     @extend %align-center;
     list-style: none;
     text-align: center;
-    margin-right: 24px;
+    margin-right: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-column-gap: 10px;
+    width: 70vw;
+    justify-content: end;
 
     @include tablet { /* effects applied when width is 768px or less */
       display: none; // hides menu links
     }
 
-    &-link { /* equivalent to .navbar-menus-link */
-      color: $dark;
+    &-item {  /* equivalent to .navbar-menu-item */
       @extend %align-center;
-      justify-content: center;
-      text-decoration: none;
-      padding: 0 1rem;
+      height: $top-height;
 
-      &:hover { /* equivalent to .navbar-menus-link:hover */
-        color: $hoverLink;
-        transition: all 0.3s ease;
+      &-link { /* equivalent to .navbar-menu-item-link */
+        color: $dark;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0 1rem;
+
+        &:hover { /* equivalent to .navbar-menu-item-link:hover */
+          color: $hoverLink;
+          transition: all 0.3s ease-out;
+        }
       }
     }
   }

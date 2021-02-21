@@ -3,8 +3,8 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 import PageNotFound from "./PageNotFound";
-import ProjectList from "./ProjectList";
 import NavContainer from "../components/navigation/NavContainer";
+import { getRoutesFromConfig } from "../utils/navigation/menu-item-utils";
 
 // Import Redux Store
 import configureStore from "../redux/root-store";
@@ -15,14 +15,21 @@ const App = () => {
 	    <div className="app">
     		<Provider store={store}>
 				<Router>
-					<NavContainer />
-					<div className="app_content">
-						<Switch>
-							<Route exact path="/" component={HomePage} />
-							<Route exact path="/projects" component={ProjectList} />
-							<Route path="*" component={PageNotFound}/>
-						</Switch>
+					<div className="app-header">
+						<NavContainer />
 					</div>
+					<div className="app-main">
+						<React.Suspense fallback="Accident Happened...">
+							<Switch>
+								<Route exact path="/" component={HomePage} />
+								{getRoutesFromConfig().map((menuItem, idx) => (
+									<Route key={idx} exact path={menuItem.pathname} component={menuItem.component} />
+								))}
+								<Route path="*" component={PageNotFound}/>
+							</Switch>
+						</React.Suspense>
+					</div>
+					<div className="app-footer" />
 				</Router>
 		    </Provider>
 	    </div>

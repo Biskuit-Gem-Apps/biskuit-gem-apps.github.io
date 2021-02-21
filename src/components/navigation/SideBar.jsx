@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
-import MenuList from "./MenuList";
+import SidebarMenuList from "./SidebarMenuList";
 import { initSidebarMenu } from "../../utils/navigation/menu-item-utils";
 
 const Sidebar = props => {
@@ -21,10 +21,12 @@ const Sidebar = props => {
     }, [props.location.pathname]);
 
     return (
-        <div className={`sidebar ${props.showSidebar ? "" : "collapsed"}`}>
-            {props.showSidebar && (
-                <MenuList depth={1} items={menuItems} expanded={false} selectedItem={selectedMenuItem} />
-            )}
+        <div className={`sidebar-overlay ${props.showSidebar ? "" : "collapsed"}`}>
+            <div className="sidebar">
+                {props.showSidebar && (
+                    <SidebarMenuList depth={1} items={menuItems} expanded={false} selectedItem={selectedMenuItem} />
+                )}
+            </div>
         </div>
     );
 };

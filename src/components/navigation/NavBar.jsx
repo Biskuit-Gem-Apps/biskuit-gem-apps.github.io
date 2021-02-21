@@ -1,20 +1,29 @@
 import PropTypes from "prop-types";
-import React  from "react";
+import React, { useEffect, useState }  from "react";
 import { Link } from 'react-router-dom';
+import NavBarMenuItem from "./NavBarMenuItem";
+import logo from "../../assets/logo.png";
+import { initNavbarMenu } from "../../utils/navigation/menu-item-utils";
 
 const NavBar = props => {
+    const [menuItems, setMenuItems] = useState([]);
 
+    useEffect(() => {
+        setMenuItems(initNavbarMenu());
+    }, []);
 
     return (
         <nav className="navbar">
-            <Link to='/' className="navbar-logo">BiskuitGem</Link>
+            <Link to='/' className="navbar-logo">
+                <img src={logo} alt="logo" />
+                Biskuit<span>Gem</span>
+            </Link>
             <div className="navbar-bars" onClick={() => props.toggleSidebar()}>
                 <i className={props.showSidebar ? "fa fa-times" : "fa fa-bars"}/>
             </div>
-            <div className="navbar-menus">
-                <Link to='/projects' className="navbar-menus-link">Projects</Link>
-                <Link to='/support' className="navbar-menus-link">Support</Link>
-            </div>
+            <ul className="navbar-menu">
+                {menuItems.map((menuItem, idx) => <NavBarMenuItem key={idx} item={menuItem} />)}
+            </ul>
         </nav>
     );
 };

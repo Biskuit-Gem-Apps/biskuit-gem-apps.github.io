@@ -1,3 +1,7 @@
 @mixin bg-translucent-dark($opacity) {
   background: rgba(0, 0, 0, $opacity);
 }
+
+@mixin bg-translucent-grey($opacity) {
+  background: rgba(247, 247, 247, $opacity);
+}

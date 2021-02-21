@@ -1,0 +1,38 @@
+.content-top {
+  padding-top: 13px;
+  padding-bottom: 27px;
+}
+
+.app-header {
+  display: block;
+  height: $top-height;
+  margin: 0;
+  background-repeat: repeat-x;
+  position: relative;
+  z-index: 905;
+  color: #444444;
+}
+
+.app-main {
+  min-height: 500px;
+  padding: 0 calc((100vw - 1200px) /2); /* centers the content */
+}
+
+.app-content {
+  padding: 8px 32px 8px 40px;
+  @include tablet { /* effects applied when width is 768px or less */
+    padding: 8px 20px;
+  }
+
+  h1.page-title {
+    font-weight: $font-bold;
+    color: $page-title-color;
+    float: left;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+}

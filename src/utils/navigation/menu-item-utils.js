@@ -1,4 +1,4 @@
-import { SIDEBAR_MENU } from "./menu-item-config";
+import { MENU_ITEMS } from "./menu-item-config";
 
 const isEmptyObject = obj => obj && Object.keys(obj).length === 0 && obj.constructor === Object;
 
@@ -20,7 +20,7 @@ const setSidebarMenuState = (menuItems, pathToMenuItemMap, currentPath) => {
                     // it is sub item (expand current item)
                     selected = result;
                     item.expanded = true;
-                    break;
+                    // break;
                 }
             }
         }
@@ -29,8 +29,32 @@ const setSidebarMenuState = (menuItems, pathToMenuItemMap, currentPath) => {
 };
 
 export const initSidebarMenu = currentPath => {
-    const menuItems = SIDEBAR_MENU;
+    const menuItems = MENU_ITEMS;
     const pathToMenuItemMap = {};
     const selected = setSidebarMenuState(menuItems, pathToMenuItemMap, currentPath);
     return { menuItems, pathToMenuItemMap, selected };
+};
+
+export const initNavbarMenu = () => {
+    return MENU_ITEMS;
+};
+
+const getRoutesFromMenuItem = (menuItems, results) => {
+    let item;
+    for (item of menuItems) {
+        if (!item.noRoute) {
+            results.push(item);
+        }
+
+        if (item.items) {
+            getRoutesFromMenuItem(item.items, results);
+        }
+    }
+};
+
+export const getRoutesFromConfig = () => {
+    const menuItems = MENU_ITEMS;
+    const results = [];
+    getRoutesFromMenuItem(menuItems, results);
+    return results;
 };

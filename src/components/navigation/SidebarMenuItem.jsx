@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import { Link, withRouter } from "react-router-dom";
-import MenuList from "./MenuList";
+import SidebarMenuList from "./SidebarMenuList";
 
-const MenuItem = props => {
+const SidebarMenuItem = props => {
     const [menuItem, setMenuItem] = useState(props.item);
     const [listClass, setListClass] = useState("");
 
@@ -36,13 +36,13 @@ const MenuItem = props => {
                 )}
             </Link>
             {menuItem.items && (
-                <MenuList depth={props.depth + 1} items={menuItem.items} expanded={menuItem.expanded} selectedItem={props.selectedItem} />
+                <SidebarMenuList depth={props.depth + 1} items={menuItem.items} expanded={menuItem.expanded} selectedItem={props.selectedItem} />
             )}
         </li>
     );
 };
 
-MenuItem.propTypes = {
+SidebarMenuItem.propTypes = {
     depth: PropTypes.number.isRequired,
     item: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired,
@@ -50,4 +50,4 @@ MenuItem.propTypes = {
     selectedItem: PropTypes.object.isRequired,
 };
 
-export default withRouter(MenuItem);
+export default withRouter(SidebarMenuItem);

@@ -1,7 +1,20 @@
 $light: #f7f7f7;
 $dark: #222121;
-$logoTextColor: red;
-$hoverLink: #209e91 !default;
-$linkColor: #ffffff;
-$selectedLinkBg: #209e91 !default;
-$selectedLinkColor: #ffffff;
+$pink: #e771acff;
+$green: #62da44;
+$yellow: #fbec1f;
+
+// logo
+$logoTextColor: $dark;
+$logoTextSpanColor: $pink;
+
+// links & selection color
+$hoverLink: $pink !default;
+$hoverLinkWithBg: white !default;
+$hoverLinkBg: $pink !default;
+$linkColor: black;
+$selectedLinkBg: $pink !default;
+$selectedLinkColor: white;
+
+// page content
+$page-title-color: $dark;

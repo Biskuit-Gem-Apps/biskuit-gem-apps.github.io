@@ -1,0 +1,35 @@
+.dropdown-menu.collapsed {
+  display: none;
+}
+
+.dropdown-menu {
+  @include bg-translucent-grey(0.75);
+  width: $dropdown-menu-width;
+  position: absolute;
+  top: $top-height;
+  list-style: none;
+  text-align: start;
+
+
+  li { /* .dropdown-menu li */
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+    &:hover { /* .dropdown-menu li:hover */
+      background: $hoverLinkBg;
+    }
+  }
+
+  &-link { /* .dropdown-menu-link */
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: $linkColor;
+    padding: 16px;
+
+    &:hover {
+      color: $hoverLinkWithBg;
+    }
+  }
+}
