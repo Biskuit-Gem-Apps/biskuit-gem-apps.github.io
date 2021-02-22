@@ -22,6 +22,7 @@ const SidebarMenuItem = props => {
                 expanded: !menuItem.expanded,
             });
         } else {
+            props.toggleSidebar();
             props.history.push(menuItem.pathname);
         }
     };
@@ -36,7 +37,7 @@ const SidebarMenuItem = props => {
                 )}
             </Link>
             {menuItem.items && (
-                <SidebarMenuList depth={props.depth + 1} items={menuItem.items} expanded={menuItem.expanded} selectedItem={props.selectedItem} />
+                <SidebarMenuList depth={props.depth + 1} items={menuItem.items} expanded={menuItem.expanded} selectedItem={props.selectedItem} toggleSidebar={props.toggleSidebar} />
             )}
         </li>
     );
@@ -48,6 +49,7 @@ SidebarMenuItem.propTypes = {
     history: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
     selectedItem: PropTypes.object.isRequired,
+    toggleSidebar: PropTypes.func.isRequired,
 };
 
 export default withRouter(SidebarMenuItem);

@@ -12,7 +12,7 @@ const NavContainer = () => {
     return (
         <React.Fragment>
             <NavBar showSidebar={showSidebar} toggleSidebar={handleToggleSidebar} />
-            <Sidebar showSidebar={showSidebar} />
+            <Sidebar showSidebar={showSidebar} toggleSidebar={handleToggleSidebar} />
         </React.Fragment>
     );
 };

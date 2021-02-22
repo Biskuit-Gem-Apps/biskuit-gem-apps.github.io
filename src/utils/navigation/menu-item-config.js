@@ -1,8 +1,8 @@
 import React from "react";
 
-const PageNotFound = React.lazy(() => import("../../pages/PageNotFound"));
 const AboutPage = React.lazy(() => import("../../pages/AboutPage"));
 const ViewDocxPage = React.lazy(() => import("../../pages/support/ViewDocxPage"));
+const WITPage = React.lazy(() => import("../../pages/projects/WITPage"));
 
 export const MENU_ITEMS = [
     {
@@ -13,7 +13,7 @@ export const MENU_ITEMS = [
     },
     {
         pathname: "/projects",
-        noRoute: true,
+        noRoute: true, /* set this variable to true as this is a dropdown menu */
         label: 'Projects',
         icon: 'rocket',
         items: [
@@ -21,13 +21,13 @@ export const MENU_ITEMS = [
                 pathname: '/projects/workout-interval-timer',
                 label: 'WIT (Mobile)',
                 icon: 'stopwatch',
-                component: PageNotFound,
+                component: WITPage,
             }
         ],
     },
     {
         pathname: '/support',
-        noRoute: true,
+        noRoute: true, /* set this variable to true as this is a dropdown menu */
         label: 'Support',
         icon: 'question-circle',
         items: [

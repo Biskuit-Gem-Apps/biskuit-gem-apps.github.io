@@ -6,7 +6,7 @@ const SidebarMenuList = props => {
     return (
         <ul className={`${props.depth === 1 ? 'my-sidebar-list' : 'my-sidebar-sublist' } ${props.expanded ? 'expanded' : ''}`}>
             {props.items.map((menuItem, idx) => (
-                <SidebarMenuItem depth={props.depth} item={menuItem} selectedItem={props.selectedItem} key={idx} />
+                <SidebarMenuItem depth={props.depth} item={menuItem} selectedItem={props.selectedItem} key={idx} toggleSidebar={props.toggleSidebar} />
             ))}
         </ul>
     )
@@ -17,6 +17,7 @@ SidebarMenuList.propTypes = {
     items: PropTypes.array.isRequired,
     expanded: PropTypes.bool.isRequired,
     selectedItem: PropTypes.object.isRequired,
+    toggleSidebar: PropTypes.func.isRequired,
 };
 
 export default SidebarMenuList;

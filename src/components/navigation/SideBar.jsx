@@ -24,7 +24,7 @@ const Sidebar = props => {
         <div className={`my-sidebar-overlay ${props.showSidebar ? "" : "collapsed"}`}>
             <div className="my-sidebar">
                 {props.showSidebar && (
-                    <SidebarMenuList depth={1} items={menuItems} expanded={false} selectedItem={selectedMenuItem} />
+                    <SidebarMenuList depth={1} items={menuItems} expanded={false} selectedItem={selectedMenuItem} toggleSidebar={props.toggleSidebar} />
                 )}
             </div>
         </div>
@@ -34,6 +34,7 @@ const Sidebar = props => {
 Sidebar.propTypes = {
     location: PropTypes.object.isRequired,
     showSidebar: PropTypes.bool.isRequired,
+    toggleSidebar: PropTypes.func.isRequired,
 };
 
 export default withRouter(Sidebar);

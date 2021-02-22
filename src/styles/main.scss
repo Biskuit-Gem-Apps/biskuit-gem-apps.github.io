@@ -9,8 +9,10 @@
 /* vendor */
 @import "~bootstrap/scss/bootstrap";
 @import "vendor/socicon";
+@import "~react-alice-carousel/lib/alice-carousel.css";
 
 /* components */
+@import "components/alice-carousel";
 @import "components/landing-page";
 @import "components/navbar";
 @import "components/sidebar";

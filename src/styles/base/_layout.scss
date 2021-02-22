@@ -38,15 +38,15 @@
   }
 }
 
-.app-socicon-wrapper {
-  margin: -6px 0 0 12px;
+.app-socicon {
+  margin: 0;
   padding: 0;
   list-style: none;
   float: left;
   li {
     list-style: none;
     float: left;
-    margin-left: 16px;
+    margin-right: 16px;
     i {
       cursor: pointer;
       transition: all 0.1s ease;
@@ -57,15 +57,6 @@
       &:hover {
         transform: scale(1.2);
       }
-    }
-    i.fa-facebook-square {
-      color: $facebook-color;
-    }
-    i.fa-twitter-square {
-      color: $twitter-color;
-    }
-    i.fa-google-plus-square {
-      color: $google-color;
     }
   }
 }
