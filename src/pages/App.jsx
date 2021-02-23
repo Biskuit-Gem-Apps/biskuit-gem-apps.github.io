@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 import PageNotFound from "./PageNotFound";
 import NavContainer from "../components/navigation/NavContainer";
@@ -8,7 +8,7 @@ import { getRoutesFromConfig } from "../utils/navigation/menu-item-utils";
 const App = () => {
   	return (
 	    <div className="app">
-			<Router>
+			<Router basename={process.env.PUBLIC_URL}>
 				<div className="app-header">
 					<NavContainer />
 				</div>
