@@ -16,7 +16,7 @@
   &-logo { /* equivalent to .my-navbar-logo */
     color: $logoTextColor;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 2rem;
     font-family: $font-family;
     margin-left: 2rem;
