@@ -4,7 +4,7 @@
   "author": "BiskuitGem",
   "license": "MIT",
   "private": true,
-  "homepage": "http://biskuitgem.github.io",
+  "homepage": "http://biskuit-gem-workspace.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

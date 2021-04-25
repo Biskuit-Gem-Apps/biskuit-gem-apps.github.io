@@ -7,7 +7,10 @@ const HomePage = () => {
         <div className="app-landing">
             <div className="landing-text">
                 <h2>Welcome! <br /> to <span>Biskuit Gem</span> Workspace <span>^^</span></h2>
-                <p>We are a small team of individual developers that loves to develop applications, games and websites.</p>
+                <p>Hi, I am Ben Koh, creator of Biskuit Gem. We are a small team of individual developers who are
+                    passionate in software development and solutioning. Biskuit Gem Workspace is a space for us
+                    to explore and develop applications, games, libraries and websites in our own time. Do checkout some
+                    of our works!</p>
                 <Link to="/about">Learn More</Link>
             </div>
             <div className="landing-image">
